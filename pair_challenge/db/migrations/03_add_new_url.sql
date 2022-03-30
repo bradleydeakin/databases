@@ -1,0 +1,1 @@
+INSERT INTO bookmarks (url) VALUES('#{url}');
