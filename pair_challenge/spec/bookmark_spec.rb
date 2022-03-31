@@ -45,3 +45,13 @@ describe '.add' do
         expect(bookmark.url).to eq 'http://www.jdsports.com'
     end
 end
+
+describe '.delete' do
+    it 'deletes a bookmark' do
+        bookmark = Bookmark.add(url: 'http://www.jdsports.com', title: 'JD Sports')
+
+        Bookmark.delete(id: bookmark.id)
+
+        expect(Bookmark.all.length).to eq 0
+    end
+end
